@@ -1,6 +1,8 @@
 # matchCenter
 Copy "css" and "matchCenter" folders in www (wamp) or htdocs(xamp).
 
+Copy "smarty" in wamp/xamp folder under c:/.
+
 Run on localhost using the url
   http://localhost/matchCenter/<match_key>
 
