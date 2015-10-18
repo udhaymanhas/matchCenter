@@ -1,0 +1,141 @@
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='css/ui.css'>
+<script>
+	function toggle(r_id)
+	{
+		console.log(r_id);
+		if(r_id=="scorecard_country_a_head")
+		{
+			id="scorecard_country_b";
+			r_id="scorecard_country_a";
+		}
+		else
+		{
+			id="scorecard_country_a";
+			r_id="scorecard_country_b";
+		}
+			
+		document.getElementById(id).style.display='none';
+		document.getElementById(id+'_head').style.backgroundColor='#efefef';
+		
+		document.getElementById(r_id).style.display='block';
+		document.getElementById(r_id+'_head').style.backgroundColor='#ffffff';
+	};
+</script>
+</head>
+<body>
+<div id='main'>
+
+<div id='left_main_div'></div>
+<div id='center_main_div'>
+
+	<div id='page_head'>
+		<div id='head_title'>Cricket Center</div>
+		<div id='head_center_empty'>hce</div>
+		<div id='head_logo'>hl</div>
+	</div>
+
+	<div id='match_head'>
+		<div id='country_a'>
+			<div id='country_a_name'>Zimbave</div>
+			<div id='country_a_logo'></div>
+			<div id='country_a_score'>297/23</div>
+			<div id='country_a_hs'>HS:dsdsd sd</div>
+			<div id='country_a_bb'>BB:sdfds df</div>
+		</div>
+		<div class='separator'></div>
+		<div id='match_overview'>
+			<div id='match_status'>Zimbave won by 50 runs</div>
+			<div id='match_number'>4th ODI</div>
+			<div id='match_sub_details'>12/23/1234|eden Garden</div>
+		</div>
+		<div class='separator'></div>
+		<div id='country_b'>
+			<div id='country_b_name'>Afghanistan</div>
+			<div id='country_b_logo'></div>
+			<div id='country_b_score'>297/23</div>
+			<div id='country_b_hs'>HS:dsdsd sd</div>
+			<div id='country_b_bb'>BB:sdfds df</div>
+		</div>
+	</div>
+
+	<div id='match_details'>
+	<div id='scorecard_head'>Score Card</div>
+	<div id='scorecard_countries'>
+		<div id='scorecard_country_a_head' onclick='toggle(this.id);'>Zimbave <br> 123/2</div>
+		<div id='scorecard_country_b_head' onclick='toggle(this.id);'>Afghanistan <br> 323/2</div>
+	</div>
+	<div id='scorecard_country_a'>
+	<br>
+		<table id='batting_table_a' align='center' border='0' cellspacing='0' cellpadding='0'>
+			<tr id='table_head' >
+				<th width='130' id='batsmen'>Batsmen</th>
+				<th width='230' id='batting_table_comments'></th>
+				<th width='50' id='runs'>Runs</th>
+				<th width='30' id='balls'>Balls</th>
+				<th width='40' id='sr'>SR</th>
+				<th width='30' id='4s'>4s</th>
+				<th width='30' id='6s'>6s</th>
+			</tr>
+		</table>
+		<br>
+		<table id='fow_table_a' border='0' cellspacing='0' cellpadding='0'>
+			<tr id='table_head' >
+				<th width='540'>&nbsp &nbsp Fall of Wickets</th>
+			</tr>
+		</table>
+		<br>
+		<table id='bowling_table_a' align='center' border='0' cellspacing='0' cellpadding='0'>
+			<tr id='table_head'>
+				<th width='130' id='bowler'>Bowler</th>
+				<th width='40' id='o'>O</th>
+				<th width='50' id='r'>R</th>
+				<th width='30' id='w'>W</th>
+				<th width='50' id='econ'>Econ</th>
+				<th width='40' id='dots'>Dots</th>
+			</tr>
+		</table>
+		<br>
+	</div>
+	<div id='scorecard_country_b'>
+	<br>
+		<table id='batting_table_b' align='center' border='0' cellspacing='0' cellpadding='0'>
+			<tr id='table_head'>
+				<th width='130' id='batsmen'>Batsmen</th>
+				<th width='230' id='batting_table_comments'></th>
+				<th width='50' id='runs'>Runs</th>
+				<th width='30' id='balls'>Balls</th>
+				<th width='40' id='sr'>SR</th>
+				<th width='30' id='4s'>4s</th>
+				<th width='30' id='6s'>6s</th>
+			</tr>
+		</table>
+		<br>
+		<table id='fow_table_b' border='0' cellspacing='0' cellpadding='0'>
+			<tr id='table_head' >
+				<th width='540'>&nbsp &nbsp Fall of Wickets</th>
+			</tr>
+		</table>
+		<br>
+		<table id='bowling_table_b' align='center' border='0' cellspacing='0' cellpadding='0'>
+			<tr id='table_head'>
+				<th width='130' id='bowler'>Bowler</th>
+				<th width='40' id='o'>O</th>
+				<th width='50' id='r'>R</th>
+				<th width='30' id='w'>W</th>
+				<th width='50' id='econ'>Econ</th>
+				<th width='40' id='dots'>Dots</th>
+			</tr>
+		</table>
+		<br>
+	</div>
+	
+	</div>
+
+</div>
+<div id='right_main_div'></div>
+
+</div>
+</body>
+</html>

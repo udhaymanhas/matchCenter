@@ -1,0 +1,217 @@
+div {
+	font-size:15px;	
+}
+body{
+background-color:#efefef;
+}
+
+#main{
+width:99%;
+border:1px solid red;}
+
+#left_main_div{position:relative;
+height:100%;
+width:19%;
+float:left;}
+
+#center_main_div{position:relative;
+height:100%;
+width:60%;
+float:left;}
+
+#page_head{height: 60px;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;}
+#head_title{border: 2px solid green;
+    display: table-cell;
+    float: left;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 43%;}
+#head_center_empty{ border: 2px solid blue;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 35%;}
+#head_logo{border: 2px solid yellow;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 20%;}
+
+#match_head{background-color: #ffffff;
+    border: 1px solid black;
+    height: 120px;
+    margin-top: 30px;
+    position: relative;
+    width: 100%;}
+#country_a{float: left;
+    height: 100%;
+    position: relative;
+    width: 33%;}
+#country_a_name{font-family: sans-serif;
+    font-size: 35px;
+    height: 73px;
+    margin-top: 7px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_a_logo{height: 80px;
+    margin-left: 500px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_a_score{font-family: cursive;
+    font-weight: bold;
+    height: 50px;
+    margin-top: 45px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_a_hs{font-family: verdana;
+    font-size: 13px;
+    height: 50px;
+    margin-top: 79px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_a_bb{font-family: verdana;
+    font-size: 13px;
+    height: 50px;
+    margin-top: 96px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+
+#match_overview{float: left;
+    height: 100%;
+    position: relative;
+    width: 32%;}
+#match_status{font-weight: bold;
+    height: 30px;
+    margin-top: 18px;
+    position: absolute;
+    text-align: center;
+    width: 100%;}
+#match_number{height: 30px;
+    margin-top: 75px;
+    position: absolute;
+    text-align: center;
+    width: 100%;}
+#match_sub_details{height: 30px;
+    margin-top: 92px;
+    position: absolute;
+    text-align: center;
+    width: 100%;}
+
+#country_b{float: left;
+    height: 100%;
+    position: relative;
+    width: 33%;}
+#country_b_name{font-family: sans-serif;
+    font-size: 35px;
+    height: 73px;
+    margin-top: 7px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_b_logo{height: 80px;
+    margin-left: 500px;
+    margin-top: 24px;
+    position: absolute;
+    width: 250px;}
+#country_b_score{font-family: cursive;
+    font-weight: bold;
+    height: 50px;
+    margin-top: 45px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_b_hs{font-family: verdana;
+    font-size: 13px;
+    height: 50px;
+	margin-top: 79px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_b_bb{font-family: verdana;
+    font-size: 13px;
+    height: 50px;
+    margin-top: 96px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+    
+#right_main_div{position:relative;
+height:100%;
+width:19%;
+float:left;}
+
+.separator{background-color: green;
+    border-radius: 12px;
+    float: left;
+    height: 80%;
+    margin-top: 14px;
+    position: relative;
+    width: 3px;}
+	
+#scorecard_head{position:relative;
+width:70%;
+height:40px;
+margin-top: 14px;
+background-color:white;}
+	
+#scorecard_countries{position:relative;
+width:70%;
+height:50px;
+margin-top:10px;}	
+#scorecard_country_a_head{position:relative;
+width:50%;
+height:50px;
+background-color:#ffffff;
+float:left;
+text-align:center;
+font-family:sans-serif;	
+font-weight:bold;}	
+#scorecard_country_b_head{position:relative;
+width:50%;
+height:50px;
+background-color:#efefef;
+float:left;
+text-align:center;
+font-family:sans-serif;
+font-weight:bold;}		
+#scorecard_country_a{position:relative;
+width:70%;
+background-color:#ffffff;
+display:block;}	
+#batting_table{}	
+#table_head{background-color:blue;
+color:white;
+font-weight:bold;}	
+#batsmen{}	
+#batting_table_comments{}	
+#runs{}	
+#balls{}	
+#sr{}	
+#4s{}	
+#6s{}	
+#bowling_table{}	
+#bowler{}	
+#o{}	
+#r{}	
+#w{}	
+#econ{}	
+#dots{}
+
+#scorecard_country_b{position:relative;
+width:70%;
+background-color:#ffffff;
+display:none;}
+
+
+
+
