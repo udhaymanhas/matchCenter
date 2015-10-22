@@ -3,12 +3,35 @@ body{
 	
 }
 table{
-	font-family:helvetica;
+	font-family:Trebuchet MS;
 }
 td{
 	padding-top:.3em;
 	padding-bottom:.3em;
 }
+th{
+	text-align:left;
+}
+
+.numbers{
+	font-family:monospace;
+	font-weight:bold;
+}
+
+.extras{
+	text-align:center;
+}
+
+.maiden_overs{
+	text-align:center;
+}
+
+.out_str{
+	font-size:13px;
+	font-weight:bold;
+	font-family:serif;
+}
+
 #main{
 width:99%;}
 
@@ -93,6 +116,8 @@ background-color:#efefef;}
     width: 100%;
 	text-align:center;}
 
+	
+	
 #match_overview{float: left;
     height: 100%;
     position: relative;
@@ -115,7 +140,7 @@ background-color:#efefef;}
     position: absolute;
     text-align: center;
     width: 100%;
-	font-family: Georgia;
+	font-family: Georgia	;
 	font-size: 12px;}
 
 #country_b{float: left;
@@ -175,6 +200,71 @@ float:left;}
     position: relative;
     width: 3px;}
 	
+#current_head{
+	position: relative;
+	border:0px solid red;
+	float:right;
+	height:40px;
+	width:28%;
+	background-color: #ffffff	
+}	
+
+#current_head_title{
+	font-family:tahoma;
+	font-size:20px;
+}
+
+#current_details{position:relative;
+height:;
+width:28%;
+margin-top:10px;
+float:right;
+background-color: #ffffff;
+display:none;}
+
+/* #current_details{position:fixed;
+height:;
+width:250px;
+margin-top:10px;
+margin-left:570px;
+float:right;
+border:0px solid red;
+background-color: #ffffff;
+display:block;
+clear:both;} */
+
+#current_stat{position:relative;
+height:;
+width:100%;
+margin-top:2px;
+float:right;}
+
+#current_stat_played{color:#828282;
+font-size:16px;
+padding:none;
+}
+
+#current_stat_playing{color:#00A37A;
+font-size:21px;
+font-weight:bold;
+padding:none;}
+
+#on_pitch{position:relative;
+height:;
+width:100%;
+margin-top:2px;
+float:right;}
+
+.on_pitch_player{
+	font-family:Trebuchet MS;
+	background-color:#FF6666;
+}
+
+.on_pitch_player_stat{
+	font-family:monospace;
+	font-size:11px;
+}
+
 #scorecard_head{position:relative;
 width:70%;
 height:40px;

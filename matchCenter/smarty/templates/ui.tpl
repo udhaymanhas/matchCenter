@@ -71,22 +71,44 @@
 	</div>
 
 	<div id='match_details'>
+	<div id='current_head'><table><tr><td id='current_head_title'>&nbsp FEED</td></tr></table></div>
+	
 	<div id='scorecard_head'>{html_image file='img/scorecard_img.jpg' width='130' height='27'}
 	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
 	{html_image file='img/scorecard_logo.png' width='90' height='36'}</div>
+	<div id='current_details'>
+	<div id='current_stat'>
+	<table>
+	<tr><th colspan='2' id='current_stat_played'></th></tr>
+	<tr><td>&nbsp &nbsp</td><th id='current_stat_playing'></th></tr>
+	</table>
+	</div>
+	<div id='on_pitch'>
+		<table align='center' style='margin-top:5px;'>
+		<tr><th id='on_pitch_striker' class='on_pitch_player'></th></tr>
+		<tr><th id='on_pitch_striker_stat' class='on_pitch_player_stat'></th></tr>
+		<tr><th id='on_pitch_nonstriker' class='on_pitch_player'></th></tr>
+		<tr><th id='on_pitch_nonstriker_stat' class='on_pitch_player_stat'></th></tr>
+		<tr><td>&nbsp</td></tr>
+		<tr><th id='on_pitch_bowler' class='on_pitch_player'></th></tr>
+		<tr><th id='on_pitch_bowler_stat' class='on_pitch_player_stat'></th></tr>
+		</table>
+	</div>
+	</div>
 	<div id='scorecard_countries'>
 		<div id='scorecard_country_a_head' onclick='toggle(this.id);'></div>
 		<div id='scorecard_country_b_head' onclick='toggle(this.id);'></div>
 	</div>
+	
 	<div id='scorecard_country_a'>
 	<br>
 		<table id='batting_table_a' align='center' border='0' cellspacing='0' cellpadding='0'>
 			<tr id='table_head' >
-				<th width='130' id='batsmen'>Batsmen</th>
+				<th width='130' id='batsmen'>&nbsp &nbsp Batsmen</th>
 				<th width='230' id='batting_table_comments'></th>
-				<th width='50' id='runs'>Runs</th>
-				<th width='30' id='balls'>Balls</th>
-				<th width='40' id='sr'>SR</th>
+				<th width='45' id='runs'>Runs</th>
+				<th width='50' id='balls'>Balls</th>
+				<th width='60' id='sr'>SR</th>
 				<th width='30' id='4s'>4s</th>
 				<th width='30' id='6s'>6s</th>
 			</tr>
@@ -100,12 +122,13 @@
 		<br>
 		<table id='bowling_table_a' align='center' border='0' cellspacing='0' cellpadding='0'>
 			<tr id='table_head'>
-				<th width='170' id='bowler'>Bowlers</th>
-				<th width='40' id='o'>O</th>
-				<th width='50' id='r'>R</th>
+				<th width='170' id='bowler'>&nbsp &nbsp Bowlers</th>
+				<th width='52' id='o'>O</th>
+				<th width='35' id='r'>R</th>
 				<th width='30' id='w'>W</th>
 				<th width='50' id='econ'>Econ</th>
-				<th width='40' id='dots'>Dots</th>
+				<th width='40' id='dots'>Extra</th>
+				<th width='40' id='dots'>Maiden</th>
 			</tr>
 		</table>
 		<br>
@@ -114,11 +137,11 @@
 	<br>
 		<table id='batting_table_b' align='center' border='0' cellspacing='0' cellpadding='0'>
 			<tr id='table_head'>
-				<th width='130' id='batsmen'>Batsmen</th>
+				<th width='130' id='batsmen'>&nbsp &nbsp Batsmen</th>
 				<th width='230' id='batting_table_comments'></th>
-				<th width='50' id='runs'>Runs</th>
-				<th width='30' id='balls'>Balls</th>
-				<th width='40' id='sr'>SR</th>
+				<th width='45' id='runs'>Runs</th>
+				<th width='50' id='balls'>Balls</th>
+				<th width='60' id='sr'>SR</th>
 				<th width='30' id='4s'>4s</th>
 				<th width='30' id='6s'>6s</th>
 			</tr>
@@ -132,16 +155,18 @@
 		<br>
 		<table id='bowling_table_b' align='center' border='0' cellspacing='0' cellpadding='0'>
 			<tr id='table_head'>
-				<th width='170' id='bowler'>Bowlers</th>
-				<th width='40' id='o'>O</th>
-				<th width='50' id='r'>R</th>
+				<th width='170' id='bowler'>&nbsp &nbsp Bowlers</th>
+				<th width='52' id='o'>O</th>
+				<th width='35' id='r'>R</th>
 				<th width='30' id='w'>W</th>
 				<th width='50' id='econ'>Econ</th>
-				<th width='40' id='dots'>Dots</th>
+				<th width='40' id='dots'>Extra</th>
+				<th width='40' id='dots'>Maiden</th>
 			</tr>
 		</table>
 		<br>
 	</div>
+	
 	
 	</div>
 
