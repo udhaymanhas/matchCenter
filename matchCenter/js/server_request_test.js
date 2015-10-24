@@ -31,7 +31,7 @@ $(document).ready(function(){
 		document.getElementById('innings_div').style.display='none';
 	}
 	request_server_data();
-	//setInterval(request_server_data,3000);
+	setInterval(request_server_data,4000);
  }
  
 function empty_view_data(data_array)
