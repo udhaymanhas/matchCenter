@@ -1,0 +1,436 @@
+
+body{
+	
+}
+table{
+	font-family:Trebuchet MS;
+}
+td{
+	padding-top:.3em;
+	padding-bottom:.3em;
+}
+th{
+	text-align:left;
+}
+
+.numbers{
+	font-family:monospace;
+	font-weight:bold;
+}
+
+.extras{
+	text-align:center;
+}
+
+.maiden_overs{
+	text-align:center;
+}
+
+.out_str{
+	font-size:13px;
+	font-weight:bold;
+	font-family:serif;
+}
+
+#main{
+width:99%;}
+
+#left_main_div{position:relative;
+height:100%;
+width:14%;
+float:left;}
+
+#left_sub_div{position:relative;
+height:1300px;
+width:5%;
+float:left;
+background-color:#efefef;}
+
+#center_main_div{position:relative;
+height:1300px;
+width:60%;
+float:left;
+background-color:#efefef;}
+
+#page_head{height: 60px;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+	background-color: #ffffff;}
+#head_title{display: table-cell;
+    float: left;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 43%;}
+#head_center_empty{float: left;
+    height: 100%;
+    position: relative;
+    width: 35%;}
+#head_logo{float: left;
+    height: 100%;
+    position: relative;
+    width: 20%;}
+
+#match_head{background-color: #ffffff;
+    height: 120px;
+    margin-top: 30px;
+    position: relative;
+    width: 100%;}
+#country_a{float: left;
+    height: 100%;
+    position: relative;
+    width: 33%;}
+#country_a_name{font-family: sans-serif;
+    font-size: 35px;
+    height: 73px;
+    margin-top: 9px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_a_logo{height: 80px;
+    margin-left: 500px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_a_score{font-family: cursive;
+    font-weight: bold;
+    height: 50px;
+    margin-top: 47px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_a_hs{font-family: verdana;
+    font-size: 13px;
+    height: 50px;
+    margin-top: 79px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_a_bb{font-family: verdana;
+    font-size: 13px;
+    height: 50px;
+    margin-top: 96px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+
+	
+	
+#match_overview{float: left;
+    height: 100%;
+    position: relative;
+    width: 32%;}
+#match_status{ font-family: arial;
+	font-weight: bold;
+    height: 20px;
+    margin-top: 14px;
+    position: absolute;
+    text-align: center;
+    width: 100%;}
+#match_number{height: 20px;
+    margin-top: 53px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+	font-family: monospace;}
+#match_sub_details{height: 40px;
+    margin-top: 72px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+	font-family: Georgia	;
+	font-size: 12px;}
+
+#country_b{float: left;
+    height: 100%;
+    position: relative;
+    width: 33%;}
+#country_b_name{font-family: sans-serif;
+    font-size: 35px;
+    height: 73px;
+    margin-top: 9px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_b_logo{height: 80px;
+    margin-left: 500px;
+    margin-top: 24px;
+    position: absolute;
+    width: 250px;}
+#country_b_score{font-family: cursive;
+    font-weight: bold;
+    height: 50px;
+    margin-top: 47px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_b_hs{font-family: verdana;
+    font-size: 13px;
+    height: 50px;
+	margin-top: 79px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+#country_b_bb{font-family: verdana;
+    font-size: 13px;
+    height: 50px;
+    margin-top: 96px;
+    position: absolute;
+    width: 100%;
+	text-align:center;}
+    
+#right_sub_div{position:relative;
+height:1300px;
+width:5%;
+float:left;
+background-color:#efefef;}
+	
+#right_main_div{position:relative;
+height:100%;
+width:14%;
+float:left;}
+
+.separator{background-color: green;
+    border-radius: 12px;
+    float: left;
+    height: 80%;
+    margin-top: 14px;
+    position: relative;
+    width: 3px;}
+	
+#current_head{
+	position: relative;
+	border:0px solid red;
+	float:right;
+	height:40px;
+	width:28%;
+	background-color: #ffffff	
+}	
+
+#current_head_title{
+	font-family:tahoma;
+	font-size:20px;
+}
+
+#current_details{position:relative;
+height:;
+width:28%;
+margin-top:10px;
+float:right;
+background-color: #ffffff;
+}
+
+/* #current_details{position:fixed;
+height:;
+width:250px;
+margin-top:10px;
+margin-left:570px;
+float:right;
+border:0px solid red;
+background-color: #ffffff;
+display:block;
+clear:both;} */
+
+#current_stat{position:relative;
+height:;
+width:100%;
+margin-top:2px;
+float:right;}
+
+#current_stat_played{color:#828282;
+font-size:16px;
+padding:none;
+}
+
+#current_stat_playing{color:#00A37A;
+font-size:21px;
+font-weight:bold;
+padding:none;
+padding-left:15px;}
+
+#on_pitch{position:relative;
+height:;
+width:100%;
+margin-top:2px;
+float:right;}
+
+.on_pitch_player{
+	font-family:Trebuchet MS;
+	background-color:#FF6666;
+	padding-left:10px;
+}
+
+.on_pitch_player_stat{
+	font-family:monospace;
+	font-size:11px;
+}
+
+#scorecard_head{position:relative;
+width:70%;
+height:40px;
+margin-top: 14px;
+background-color:white;}
+	
+#scorecard_countries{position:relative;
+width:70%;
+height:50px;
+margin-top:10px;}	
+#scorecard_country_a_1_head{position:relative;
+width:50%;
+height:50px;
+background-color:#ffffff;
+float:left;
+text-align:center;
+font-family:sans-serif;	
+font-weight:bold;
+display:block;}	
+
+#scorecard_country_b_1_head{position:relative;
+width:50%;
+height:50px;
+background-color:#efefef;
+float:left;
+text-align:center;
+font-family:sans-serif;
+font-weight:bold;
+display:block;}
+
+#scorecard_country_a_2_head{position:relative;
+width:50%;
+height:50px;
+background-color:#efefef;
+float:left;
+text-align:center;
+font-family:sans-serif;
+font-weight:bold;
+display:none;}	
+
+#scorecard_country_b_2_head{position:relative;
+width:50%;
+height:50px;
+background-color:#efefef;
+float:left;
+text-align:center;
+font-family:sans-serif;
+font-weight:bold;
+display:none;}	
+
+/* #scorecard_country_a_2_head{position:absolute;
+width:50%;
+height:50px;
+background-color:red;
+text-align:center;
+font-family:sans-serif;	
+font-weight:bold;
+border:1px solid red;
+display:none;}	
+
+#scorecard_country_b_2_head{position:absolute;
+width:50%;
+height:50px;
+background-color:green;
+text-align:center;
+font-family:sans-serif;	
+font-weight:bold;
+border:1px solid green;
+margin-left:50%;
+display:none;}	 */
+		
+#scorecard_country_a_1{position:relative;
+width:70%;
+background-color:#ffffff;
+display:block;}	
+#scorecard_country_a_2{position:relative;
+width:70%;
+background-color:#ffffff;
+display:none;}	
+
+#batting_table{}	
+#table_head{background-color:#009999;
+color:white;
+font-weight:bold;}	
+#batsmen{}	
+#batting_table_comments{}	
+#runs{}	
+#balls{}	
+#sr{}	
+#4s{}	
+#6s{}	
+#bowling_table{}	
+#bowler{}	
+#o{}	
+#r{}	
+#w{}	
+#econ{}	
+#dots{}
+
+#scorecard_country_b_1{position:relative;
+width:70%;
+background-color:#ffffff;
+display:none;}
+#scorecard_country_b_2{position:relative;
+width:70%;
+background-color:#ffffff;
+display:none;}
+
+#innings_head_country_a_1{
+background-color:#ffffff;
+height:100%;
+width:25%;
+float:left;
+position:relative;
+display:block;
+
+}
+
+#innings_head_country_a_2{
+background-color:#efefef;
+height:100%;
+width:25%;
+float:left;
+position:relative;
+display:block;
+
+}
+
+#innings_head_country_b_1{
+background-color:#efefef;
+height:100%;
+width:25%;
+float:right;
+position:relative;
+display:none;
+
+}
+
+#innings_head_country_b_2{
+background-color:#efefef;
+height:100%;
+width:25%;
+float:right;
+position:relative;
+display:none;
+
+}
+
+
+/* #innings_div{
+height:15px;
+width:554px;
+position:relative;
+display:block;
+} */
+#innings_div{
+position:relative;
+width:70%;
+height:20px;
+margin-bottom:-10px;
+margin-top:10px;
+display:block;
+font-family:Trebuchet MS;
+font-size:14px;
+
+
+}

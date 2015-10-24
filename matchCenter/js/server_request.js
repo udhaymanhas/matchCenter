@@ -3,6 +3,7 @@ function request_server_data()
 	console.log("JS Started");
 	var xmlhttp = new XMLHttpRequest();
 	var url = document.getElementById('url').value;
+	
 
 	xmlhttp.onreadystatechange = function() 
 	{
@@ -17,12 +18,21 @@ function request_server_data()
 	xmlhttp.send();
 }
 
-window.onload = start_js();
- 
+$(document).ready(function(){
+// window.onload = start_js();
+ start_js();
+} );
+
  function start_js()
  {
+	var match_format = document.getElementById('format').value;
+	
+	if(match_format == 'oneday')
+	{	
+		document.getElementById('innings_div').style.display='none';
+	}
 	request_server_data();
-	//setInterval(request_server_data,3000);
+	setInterval(request_server_data,3000);
  }
  
 function empty_view_data(data_array)
@@ -76,12 +86,22 @@ function update_view_data(data_array)
 	else if(status == "notstarted")
 		match_status=card['short_name'];
 	
+	if(card['format'] == 'one-day')
+		format = '1d';
+	else
+	if(card['format']=='test')
+		format = 't';
+	
 	if(status != "notstarted")
 	{
 		c_a_i = card['innings']['a_1']; //country_a_innings
 		c_b_i = card['innings']['b_1']; //country_b_innings
-	
-	
+		
+		if(format == 't')
+		{
+			c_a_i_2 = card['innings']['a_2'];
+			c_b_i_2 = card['innings']['b_2'];
+		}
 		//c_a_score = c_a_i['runs']+"/"+c_a_i['wickets']+" ("+c_a_i['overs']+")";
 		//c_b_score = c_b_i['runs']+"/"+c_b_i['wickets']+" ("+c_b_i['overs']+")";
 		
@@ -447,11 +467,12 @@ function update_view_data(data_array)
 			
 		}
 		}
+		
 		document.getElementById('country_b_score').innerHTML=c_b_score;
 		document.getElementById('country_a_score').innerHTML=c_a_score;
 		
 		document.getElementById('scorecard_country_a_head').innerHTML=country_a+"<br>"+c_a_score;
-	document.getElementById('scorecard_country_b_head').innerHTML=country_b+"<br>"+c_b_score;
+		document.getElementById('scorecard_country_b_head').innerHTML=country_b+"<br>"+c_b_score;
 	}
 	
 	document.getElementById('match_number').innerHTML=card['related_name'];
@@ -464,57 +485,57 @@ function update_view_data(data_array)
 	document.getElementById('match_status').innerHTML=match_status;
 	
 	
-	if(status == "started")
+	if(status == "started") //live card
 	{
-	current_batting = card['now']['batting_team']+"_"+card['now']['innings'];
-	current_batting_run_str = card['innings'][current_batting]['run_str'];
-	current_batting_short_name= card['teams'][card['now']['batting_team']]['short_name'];
-	current_stat_playing = current_batting_short_name+" ("+current_batting_run_str+")"
-	document.getElementById('current_stat_playing').innerHTML=current_stat_playing;
-	
-	current_bowling = card['now']['bowling_team']+"_"+card['now']['innings'];
-	current_bowling_run_str = card['innings'][current_bowling]['run_str'];
-	current_bowling_short_name= card['teams'][card['now']['bowling_team']]['short_name'];
-	current_stat_played = current_bowling_short_name+" ("+current_bowling_run_str+")";
-	if(current_bowling_run_str == null)
-		current_stat_played = current_bowling_short_name;
-	document.getElementById('current_stat_played').innerHTML=current_stat_played;
-	
-	on_pitch_striker_batting='';
-	on_pitch_nonstriker_batting='';
-	on_pitch_bowler_bowling='';
-	
-	innings = card['now']['innings'];
-	
-	striker = card['now']['striker'];
-	if(striker == null)
-	{	
-		striker_name = "-";
-		on_pitch_striker_batting = null;
-	}
-	else
-	{	
-		striker_name = card['players'][striker]['name'];
-		on_pitch_striker_batting = card['players'][striker]['match']['innings'][innings]['batting'];
-	}
-	
-	nonstriker = card['now']['nonstriker'];
-	if(nonstriker == null)
-	{	
-		nonstriker_name = "-";
-		on_pitch_nonstriker_batting = null;
-	}
-	else
-	{	
-		nonstriker_name = card['players'][nonstriker]['name'];
-		on_pitch_nonstriker_batting = card['players'][nonstriker]['match']['innings'][innings]['batting'];
-	}
-	
-	bowler = card['now']['bowler'];
-	if(bowler == null)
-	{	
-		bowler_name = "-";
-		on_pitch_bowler_bowling=null;
+		current_batting = card['now']['batting_team']+"_"+card['now']['innings'];
+		current_batting_run_str = card['innings'][current_batting]['run_str'];
+		current_batting_short_name= card['teams'][card['now']['batting_team']]['short_name'];
+		current_stat_playing = current_batting_short_name+" ("+current_batting_run_str+")"
+		document.getElementById('current_stat_playing').innerHTML=current_stat_playing;
+		
+		current_bowling = card['now']['bowling_team']+"_"+card['now']['innings'];
+		current_bowling_run_str = card['innings'][current_bowling]['run_str'];
+		current_bowling_short_name= card['teams'][card['now']['bowling_team']]['short_name'];
+		current_stat_played = current_bowling_short_name+" ("+current_bowling_run_str+")";
+		if(current_bowling_run_str == null)
+			current_stat_played = current_bowling_short_name;
+		document.getElementById('current_stat_played').innerHTML=current_stat_played;
+		
+		on_pitch_striker_batting='';
+		on_pitch_nonstriker_batting='';
+		on_pitch_bowler_bowling='';
+		
+		innings = card['now']['innings'];
+		
+		striker = card['now']['striker'];
+		if(striker == null)
+		{	
+			striker_name = "-";
+			on_pitch_striker_batting = null;
+		}
+		else
+		{	
+			striker_name = card['players'][striker]['name'];
+			on_pitch_striker_batting = card['players'][striker]['match']['innings'][innings]['batting'];
+		}
+		
+		nonstriker = card['now']['nonstriker'];
+		if(nonstriker == null)
+		{	
+			nonstriker_name = "-";
+			on_pitch_nonstriker_batting = null;
+		}
+		else
+		{	
+			nonstriker_name = card['players'][nonstriker]['name'];
+			on_pitch_nonstriker_batting = card['players'][nonstriker]['match']['innings'][innings]['batting'];
+		}
+		
+		bowler = card['now']['bowler'];
+		if(bowler == null)
+		{	
+			bowler_name = "-";
+			on_pitch_bowler_bowling=null;
 	}
 	else
 	{	
@@ -554,9 +575,7 @@ function update_view_data(data_array)
 	{
 		document.getElementById('current_details').style.display='none';
 	}
-	
-	//console.log("--->"+country_a);
-	//console.log(data_array['data']['card']['related_name']);
+
 } 
 
 
